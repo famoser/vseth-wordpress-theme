@@ -1,0 +1,194 @@
+/*
+Theme Name:   Twenty Twenty Child-Theme 
+Description:  Child-Theme für das Standardtheme Twenty Twenty mit VSETH Anpassungen
+Author:       Florian Moser
+Author URI:   https://famoser.ch/ 
+Template:     twentytwenty 
+Version:      1.0
+*/
+
+/* source sans font */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
+    url('fonts/SourceSansPro-Regular.woff') format('woff'),
+    url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Light.woff2') format('woff2'),
+    url('fonts/SourceSansPro-Light.woff') format('woff'),
+    url('fonts/SourceSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+    url('fonts/SourceSansPro-SemiBold.woff') format('woff'),
+    url('fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@supports ( font-variation-settings: normal ) {
+    body {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
+
+@supports ( font-variation-settings: normal ) {
+    input,
+    textarea,
+    button,
+    .button,
+    .faux-button,
+    .faux-button.more-link,
+    .wp-block-button__link,
+    .wp-block-file__button {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
+
+
+@supports ( font-variation-settings: normal ) {
+    .has-drop-cap:not(:focus)::first-letter,
+    .entry-content .wp-block-archives,
+    .entry-content .wp-block-categories,
+    .entry-content .wp-block-latest-posts,
+    .entry-content .wp-block-latest-comments,
+    .entry-content .wp-block-cover-image p,
+    .entry-content .wp-block-pullquote {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
+
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: normal;
+    font-size: 14pt;
+}
+
+@supports ( font-variation-settings: normal ) {
+    .entry-content cite,
+    .entry-content figcaption,
+    .entry-content .wp-caption-text {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
+
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+@supports ( font-variation-settings: normal ) {
+    .widget-content cite,
+    .widget-content figcaption,
+    .widget-content .wp-caption-text {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
+
+/* CI headers */
+h1 {
+    font-weight: 300;
+    font-size: 52pt;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 40pt;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 36pt;
+}
+
+@media ( max-width: 999px ) {
+    h1 {
+        font-weight: 300;
+        font-size: 40pt;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 36pt;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 30pt;
+    }
+}
+
+@media ( max-width: 599px ) {
+    h1 {
+        font-weight: 300;
+        font-size: 30pt;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 24pt;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 20pt;
+    }
+
+    .entry-content p,
+    .entry-content ol,
+    .entry-content ul,
+    .entry-content dl,
+    .entry-content dt {
+        font-size: 12pt;
+    }
+}
+
+/* increase size of thin from 58rem to 70 rem */
+.section-inner.thin {
+    max-width: 80rem;
+}
+
+[class*="__inner-container"] .wp-block-group:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright),
+[class*="__inner-container"] .wp-block-cover:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright) {
+    max-width: 80rem;
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 80rem;
+}
+
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 80rem;
+}
+
+.alignfull > figcaption,
+.alignfull > .wp-caption-text {
+    max-width: 80rem;
+}
+
+/* reduce size of search field */
+
+@media ( min-width: 700px ) {
+    .search-modal .search-field {
+        font-size: 1.5rem;
+        height: 6.5rem;
+    }
+}
